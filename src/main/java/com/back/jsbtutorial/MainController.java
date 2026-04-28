@@ -2,16 +2,19 @@ package com.back.jsbtutorial;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MainController {
-    @GetMapping
-    void index(){
-        System.out.println("index");
+    @GetMapping("/")
+    @ResponseBody
+    public String index(){
+        return "sbb";
     }
 
     @GetMapping("/hello")
-    void hello(){
-        System.out.println("hello");
+    @ResponseBody
+    public String hello(){
+        return "안녕하세요.";
     }
 }
