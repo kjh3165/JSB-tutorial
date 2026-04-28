@@ -1,8 +1,27 @@
 spring:
   application:
-    name: JSB-tutorial
+    name: JSB-tutorial  # 스프링 애플리케이션 이름. 로그나 Actuator 등에서 식별용으로 사용됨.
+
   output:
     ansi:
-      enabled: always
+      enabled: always  # 콘솔 로그에 ANSI 색상 출력 활성화 (항상 컬러 적용).
+
   profiles:
-    active: dev
+    active: dev  # 현재 활성화할 프로파일 지정 (예: dev, test, prod). 해당 프로파일의 yml/properties 설정 적용.
+
+  jpa:
+    show-sql: true  # 실행되는 SQL 쿼리를 콘솔에 출력.
+    hibernate:
+      ddl-auto: update  # 애플리케이션 실행 시 엔티티(Entity)에 맞게 DB 스키마 자동 생성/변경.
+      # 옵션: none, validate, update, create, create-drop
+    properties:
+      hibernate:
+        format_sql: true        # SQL 쿼리를 보기 좋게 줄바꿈 및 들여쓰기 적용.
+        highlight_sql: true     # 콘솔에서 SQL 키워드에 색상 하이라이트 적용.
+        use_sql_comments: true  # Hibernate가 생성하는 SQL에 주석 추가(디버깅/분석에 유용).
+
+  logging:
+    level:
+      org.hibernate.orm.jdbc.bind: TRACE     # Hibernate가 SQL 파라미터 바인딩 값을 TRACE 레벨로 출력.
+      org.hibernate.orm.jdbc.extract: TRACE  # JDBC에서 조회된 결과값을 TRACE 레벨로 출력.
+      org.springframework.transaction.interceptor: TRACE  # 트랜잭션 시작/종료/롤백 등의 상세 흐름을 TRACE 레벨로 출력.
