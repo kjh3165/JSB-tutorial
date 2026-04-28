@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: JSB-tutorial
+  output:
+    ansi:
+      enabled: always
+  profiles:
+    active: dev
