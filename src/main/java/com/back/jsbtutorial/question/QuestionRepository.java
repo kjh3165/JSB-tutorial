@@ -1,4 +1,4 @@
-package com.back.jsbtutorial;
+package com.back.jsbtutorial.question;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

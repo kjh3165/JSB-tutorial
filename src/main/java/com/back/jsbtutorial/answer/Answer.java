@@ -1,5 +1,6 @@
-package com.back.jsbtutorial;
+package com.back.jsbtutorial.answer;
 
+import com.back.jsbtutorial.question.Question;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,5 +1,7 @@
 package com.back.jsbtutorial;
 
+import com.back.jsbtutorial.question.Question;
+import com.back.jsbtutorial.question.QuestionRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

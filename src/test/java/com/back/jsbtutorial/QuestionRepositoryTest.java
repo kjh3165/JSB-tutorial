@@ -1,5 +1,9 @@
 package com.back.jsbtutorial;
 
+import com.back.jsbtutorial.answer.Answer;
+import com.back.jsbtutorial.answer.AnswerRepository;
+import com.back.jsbtutorial.question.Question;
+import com.back.jsbtutorial.question.QuestionRepository;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
