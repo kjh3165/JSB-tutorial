@@ -3,4 +3,8 @@
 <h2 th:text="${question.subject}"></h2>
 <p th:text="${question.content}"></p>
 
+<form th:action="@{|/answer/create/${question.id}|}" method="POST">
+    <textarea name="content" id="content" cols="30" rows="10"></textarea>
+    <input type="submit" value="답변등록">
+</form>
 
