@@ -14,10 +14,9 @@ public class AnswerController {
     private final QuestionService questionService;
 
     @PostMapping("/create/{id}")
-    @ResponseBody
     public String create(@PathVariable Integer id, @RequestParam("content") String content) {
         Question question = questionService.getQuestion(id);
         answerService.create(question, content);
-        return id + "번 답글 등록완료";
+        return "redirect:/question/detail/" + id;
     }
 }
